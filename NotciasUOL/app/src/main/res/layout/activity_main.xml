@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Aprenda sobre edição de imagens"
+        app:layout_constraintBottom_toTopOf="@+id/textView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.081"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.328" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="740dp"
+        android:layout_height="152dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/noticias" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="61dp"
+        android:layout_height="19dp"
+        android:text="12/12/12"
+        app:layout_constraintBottom_toTopOf="@+id/textView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.721"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.333" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="401dp"
+        android:layout_height="297dp"
+        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum finibus lectus sit amet felis rutrum auctor. Praesent dapibus quam dui, at venenatis velit feugiat maximus. Cras venenatis, orci sed finibus laoreet, diam sapien varius dolor, feugiat cursus dolor ligula sit amet eros. Maecenas vitae quam tristique, porttitor arcu nec, posuere enim. Quisque convallis neque tincidunt ante scelerisque, id dictum dolor pellentesque. Phasellus a velit non massa rutrum laoreet vitae in urna. Mauris porttitor orci id nibh viverra, a sodales augue porta. Nulla consequat dui dapibus, efficitur mi id, gravida nisi. Nam vel elit vel mauris aliquet faucibus rutrum et neque. Etiam sed elementum arcu. Phasellus id nibh risus. Vestibulum in ipsum ut dolor egestas egestas. In luctus, diam id sodales auctor, sapien eros dictum lacus, non sagittis enim lorem ut lorem."
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.439" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="109dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="ANTERIOR"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button2" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="111dp"
+        android:layout_height="52dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="PROXIMO"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="143dp"
+        android:layout_height="24dp"
+        android:layout_marginBottom="24dp"
+        android:text="Edvaldo Gomes Neto"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button"
+        app:layout_constraintHorizontal_bias="0.294"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        app:layout_constraintVertical_bias="0.972" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
