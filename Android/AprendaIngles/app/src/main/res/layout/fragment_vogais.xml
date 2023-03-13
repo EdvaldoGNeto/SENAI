@@ -1,16 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Fragments.VogaisFragment">
+    android:background="@drawable/segundo_fundo"
+    tools:context=".Fragments.VogaisFragment" >
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:text="VOGAIS"
-        android:textSize="34sp" />
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/A"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="180dp"
+        android:src="@drawable/vogala"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-</FrameLayout>
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/E"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="180dp"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/evogal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/I"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="180dp"
+        android:src="@drawable/i"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/A" />
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/O"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="180dp"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/o"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/E" />
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/U"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/u"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/I" />
+</androidx.constraintlayout.widget.ConstraintLayout>

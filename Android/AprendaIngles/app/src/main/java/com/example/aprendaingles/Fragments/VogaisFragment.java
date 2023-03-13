@@ -1,5 +1,6 @@
 package com.example.aprendaingles.Fragments;
 
+import android.media.MediaPlayer;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,15 +8,21 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 import com.example.aprendaingles.R;
+
+import pl.droidsonroids.gif.GifImageView;
 
 /**
  * A simple {@link Fragment} subclass.
  * Use the {@link VogaisFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class VogaisFragment extends Fragment {
+public class VogaisFragment extends Fragment implements View.OnClickListener{
+    private GifImageView A, E, I, O, U;
+
+    private MediaPlayer mediaPlayer;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -61,6 +68,54 @@ public class VogaisFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_vogais, container, false);
+        View view = inflater.inflate(R.layout.fragment_vogais, container, false);
+        A = view.findViewById(R.id.A);
+        E = view.findViewById(R.id.E);
+        I = view.findViewById(R.id.I);
+        O = view.findViewById(R.id.O);
+        U = view.findViewById(R.id.U);
+
+        A.setOnClickListener(this);
+        E.setOnClickListener(this);
+        I.setOnClickListener(this);
+        O.setOnClickListener(this);
+        U.setOnClickListener(this);
+        return view;
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.A:
+                mediaPlayer = MediaPlayer.create(getActivity(), R.raw.asom);
+                executarSom();
+                break;
+            case R.id.E:
+                mediaPlayer = MediaPlayer.create(getActivity(), R.raw.esom);
+                executarSom();
+                break;
+            case R.id.I:
+                mediaPlayer = MediaPlayer.create(getActivity(), R.raw.isom);
+                executarSom();
+                break;
+            case R.id.O:
+                mediaPlayer = MediaPlayer.create(getActivity(), R.raw.osom);
+                executarSom();
+                break;
+            case R.id.U:
+                mediaPlayer = MediaPlayer.create(getActivity(), R.raw.usom);
+                executarSom();
+                break;
+
+        }
+    }
+
+    public void executarSom(){
+        if (mediaPlayer != null){
+            mediaPlayer.start();
+        }else{
+            mediaPlayer.stop();
+            mediaPlayer.start();
+        }
     }
 }
